@@ -1,0 +1,14 @@
+<div *ngIf="selectedStories.length > 0" class="row mt-4 mb-4">
+    <h3>Auto-Selected Stories for Sprint</h3>
+    <div *ngFor="let story of selectedStories" class="col-lg-4 col-md-4 col-6">
+        <div class="card-box">
+            <div class="d-flex justify-content-end">
+                <span class="story_points">Point: {{ story.story_point }}</span>
+            </div>
+            <h4 class="story_heading">{{ story.story_name }}</h4>
+            <div class="story_description">
+                {{ story.story_description }}
+            </div>
+        </div>
+    </div>
+</div>

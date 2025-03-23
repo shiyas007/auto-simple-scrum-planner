@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Add Story Form</h1>
+        </div>
+        <div class="col-md-12">
+
+        </div>
+        <div class="container d-flex justify-content-center vh-100">
+            <div class="form_width mt-5">
+                <form #compform="ngForm" class="story_all_forms">
+                    <div class="form-group" [class.has-error]="storyNameControl.invalid && storyNameControl.touched">
+                        <label class="control-label">Story Name *</label>
+                        <input type="text" autocomplete="off" class="form-control form-control-sm" name="story_name"
+                            id="story_name" [(ngModel)]="story_name" #storyNameControl="ngModel"
+                            placeholder="Enter Story Name" required minlength="3">
+                        <span class="text-danger small d-block mt-1"
+                            *ngIf="storyNameControl.errors?.['required'] && storyNameControl.touched">
+                            Story Name is required!
+                        </span>
+                        <span class="text-danger small d-block mt-1"
+                            *ngIf="storyNameControl.errors?.['minlength'] && storyNameControl.touched">
+                            Enter at least 3 characters!
+                        </span>
+                    </div>
+                    <div class="form-group" [class.has-error]="storyPointControl.invalid && storyPointControl.touched">
+                        <label class="control-label">Story Point *</label>
+                        <input type="number" autocomplete="off" class="form-control form-control-sm" name="story_point"
+                            id="story_point" [(ngModel)]="story_point" #storyPointControl="ngModel"
+                            placeholder="Enter Story Point" required min="0">
+                            
+                        <span class="text-danger small d-block mt-1"
+                            *ngIf="storyPointControl.errors?.['required'] && storyPointControl.touched">
+                            Story Point is required!
+                        </span>
+                        <span class="text-danger small d-block mt-1"
+                            *ngIf="storyPointControl.errors?.['min'] && storyPointControl.touched">
+                            Story Point cannot be less than 0!
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Story Description</label>
+                        <textarea autocomplete="off" class="form-control form-control-sm" name="story_description"
+                            id="story_description" [(ngModel)]="story_description"
+                            placeholder="Enter Story Description (optional)" rows="3"></textarea>
+                    </div>                                                         
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary w-100" (click)="addStory()">Add Story</button>
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Sprint Calculator</h1>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <div class="form_width mt-5">
+                <form #compform="ngForm" class="story_all_forms">
+                    <div class="form-group">
+                        <label class="control-label">Sprint Name *</label>
+                        <input type="text" class="form-control form-control-sm" name="sprint_name"
+                            [(ngModel)]="sprint_name" placeholder="Enter Sprint Name" required minlength="3">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Sprint Capacity (Points) *</label>
+                        <input type="number" class="form-control form-control-sm" name="sprint_point"
+                            [(ngModel)]="sprint_point" placeholder="Enter Sprint Point" required min="0">
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-primary w-100" (click)="generateSprint()">Generate
+                            Sprint</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-primary w-100" (click)="clearStories()">Clear
+                            Stories</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-primary w-100" (click)="clearSprints()">Clear Selected
+                            Stories</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <app-auto-selected-sprint [selectedStories]="selectedStories"></app-auto-selected-sprint>
+    </div>
+</div>
