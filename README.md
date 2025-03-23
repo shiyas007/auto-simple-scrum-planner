@@ -1,5 +1,26 @@
 # SprintPlanner
 
+This is a Simple Scrum Planner built using Angular, designed to help teams manage their sprint planning efficiently. The app allows users to:
+
+Create user stories with name, story points, and optional description.
+
+Manage a backlog of stories.
+
+Generate a sprint plan based on a given sprint capacity.
+
+Store and retrieve stories using local storage.
+
+Features
+✅ Add & remove user stories
+✅ Prevent duplicate story names
+✅ Auto-generate an optimal sprint plan
+✅ Responsive UI for easy planning
+
+Tech Stack
+Frontend: Angular, TypeScript, Bootstrap
+
+Storage: LocalStorage (for saving stories)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
 
 ## Development server
