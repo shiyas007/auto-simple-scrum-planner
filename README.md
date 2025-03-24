@@ -10,7 +10,8 @@ Generate a sprint plan based on a given sprint capacity.
 
 Store and retrieve stories using local storage.
 
-Features
+# Features
+
 ✅ Add & remove user stories
 
 ✅ Prevent duplicate story names
